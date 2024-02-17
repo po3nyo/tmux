@@ -23,6 +23,8 @@ sudo apt update
 sudo apt upgrade
 sudo add-apt-repository ppa:aslatter/ppa
 sudo apt install alacritty
+curl -OL https://raw.githubusercontent.com/filip-lebiecki/tmux/main/alacritty.toml
+mv alacritty.toml .alacritty.toml
 ```
 
 ## 3. Dracula theme for Alacritty [https://draculatheme.com/alacritty]
@@ -32,8 +34,6 @@ curl -OL https://github.com/dracula/alacritty/archive/master.zip
 unzip master.zip
 mv alacritty-master/dracula.toml .config
 rm -rf alacritty-master/ master.zip
-vi .alacritty.toml
-import = [".config/dracula.toml"]
 ```
 
 ## 4. Fish shell [https://fishshell.com/]
@@ -57,6 +57,11 @@ omf install agnoster
 ```
 sudo apt install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+curl -OL https://raw.githubusercontent.com/filip-lebiecki/tmux/main/tmux.conf
+mv tmux.conf .tmux.conf
+tmux
+tmux source .tmux.conf
+Ctrl+A Shift+I
 ```
 
 ## 7. LazyVIM
