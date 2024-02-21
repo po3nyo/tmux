@@ -44,6 +44,8 @@ cd .config/kitty/
 curl -OL https://raw.githubusercontent.com/filip-lebiecki/tmux/main/kitty.conf
 ```
 
+Color theme ```https://github.com/folke/tokyonight.nvim```
+
 ## 3. Fish shell [https://fishshell.com/]
 
 ```
