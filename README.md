@@ -16,7 +16,9 @@ fc-cache -fv
 fc-list | grep JetBrainsMono
 ```
 
-## 2. Install Alacritty [https://alacritty.org/config-alacritty.html]
+### You can use Alacritty or Kitty terminal ###
+
+## 2a. Install Alacritty [https://alacritty.org/config-alacritty.html]
 
 ```
 sudo apt update
@@ -25,18 +27,24 @@ sudo add-apt-repository ppa:aslatter/ppa
 sudo apt install alacritty
 curl -OL https://raw.githubusercontent.com/filip-lebiecki/tmux/main/alacritty.toml
 mv alacritty.toml .alacritty.toml
-```
-
-## 3. Dracula theme for Alacritty [https://draculatheme.com/alacritty]
-
-```
 curl -OL https://github.com/dracula/alacritty/archive/master.zip
 unzip master.zip
 mv alacritty-master/dracula.toml .config
 rm -rf alacritty-master/ master.zip
 ```
 
-## 4. Fish shell [https://fishshell.com/]
+## 2b. Install Kitty [https://sw.kovidgoyal.net/kitty/]
+
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install kitty
+mkdir -p .config/kitty/
+cd .config/kitty/
+curl -OL https://raw.githubusercontent.com/filip-lebiecki/tmux/main/kitty.conf
+```
+
+## 3. Fish shell [https://fishshell.com/]
 
 ```
 sudo apt-add-repository ppa:fish-shell/release-3
@@ -45,14 +53,14 @@ chsh -s /usr/bin/fish
 set -U fish_greeting
 ```
 
-## 5. OH-MY-FISH Agnoster Theme [https://github.com/oh-my-fish/oh-my-fish]
+## 4. OH-MY-FISH Agnoster Theme [https://github.com/oh-my-fish/oh-my-fish]
 
 ```
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 omf install agnoster
 ```
 
-## 6. Install TMUX [https://github.com/tmux-plugins/tpm]
+## 5. Install TMUX [https://github.com/tmux-plugins/tpm]
 
 ```
 sudo apt install tmux
@@ -64,7 +72,7 @@ tmux source .tmux.conf
 Ctrl+A Shift+I
 ```
 
-## 7. LazyVIM
+## 6. LazyVIM
 
 ```
 sudo add-apt-repository ppa:neovim-ppa/unstable
